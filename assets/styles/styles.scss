@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "Raleway";
+  src: url("/assets/fonts/Raleway-Thin.eot");
+  src: url("/assets/fonts/Raleway-Thin.eot") format("embedded-opentype"),
+    url("/assets/fonts/Raleway-Thin.woff2") format("woff2"),
+    url("/assets/fonts/Raleway-Thin.woff") format("woff"),
+    url("/assets/fonts/Raleway-Thin.ttf") format("truetype"),
+    url("/assets/fonts/Raleway-Thin.otf") format("opentype");
+  font-weight: 300 800;
+  font-style: normal;
+}
+
+/*Эти переменные можно использовать, например, так: color: var(--main-font-color);*/
+
+/*Задан размер шрифта по умолчанию 10px. Благодаря этому удобно указывать размер шрифта в rem: 16px = 1.6rem и т.д.*/
+
+:root {
+  --background-color: #ffffff;
+  --main-font-color: #1f1c1c;
+  --secondary-color: #981322;
+  --light-color: #fae5d2;
+  --light-color-transparent: rgba(250, 229, 210, 0.4);
+  font-size: 10px;
+}
+
+/*Для всего обычного мелкого текста.*/
+
+@mixin main {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 100%;
+  color: var(--main-font-color);
+}
+
+/*Для мелкого текста в хедере, футере и Контактах. При использовании нужно дополнительно указать цвет через переменные выше.*/
+
+@mixin main-bolder {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 100%;
+}
+
+/*Для всех заголовков. При использовании нужно дополнительно указать цвет через переменные выше.*/
+
+@mixin h1 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(3.6rem, 4.027vw, 5.8rem);
+  line-height: 120%;
+}
+
+/*Для мелкого текста после заголовка на оффере (главном баннере).*/
+
+@mixin subheader {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 1.527vw, 2.2rem);
+  line-height: 150%;
+  color: var(--light-color);
+}
+
+/*Для кнопок.*/
+
+@mixin button {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.6rem;
+  line-height: 100%;
+  color: var(--light-color);
+}
+
+/*Для вертикального текста на оффере.*/
+
+@mixin vertical {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 100%;
+  color: #fdfdfd;
+  transform: rotate(-90deg);
+}
+
+/*Для заголовков (Причины быть покупателем) и вопросов (Часто задаваемые вопросы). При использовании нужно дополнительно указать цвет через переменные выше.*/
+
+@mixin h6 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 120%;
+}
+
+/*Для заголовков (Продукция).*/
+
+@mixin h5 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 120%;
+  color: var(--main-font-color);
+}
+
+/*Для имени (Отзывы). У этого элемента меняется размер шрифта в адаптиве, поэтому за исключением font-size этот миксин идентичен h5.*/
+
+@mixin h5-adaptive {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 1.527vw, 2.2rem);
+  line-height: 120%;
+  color: var(--main-font-color);
+}
+
+/*Для мелкого текста с датой в отзыве.*/
+
+@mixin xs {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 120%;
+  color: var(--main-font-color);
+}
+
+/*Для слогана на маленьком баннере.*/
+
+@mixin slogan {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(2.2rem, 2.5vw, 3.6rem);
+  line-height: 100%;
+  color: var(--light-color);
+}
+
+/*Для заголовка компании в футере.*/
+
+@mixin footer-name {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(1.6rem, 1.527vw, 2.2rem);
+  line-height: 100%;
+  color: var(--light-color);
+}
+
+/*Для меню в адаптивной версии.*/
+
+@mixin menu-adaptive {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.2rem;
+  line-height: 100%;
+  color: var(--main-font-color);
+}
