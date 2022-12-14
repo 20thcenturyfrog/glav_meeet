@@ -29,4 +29,99 @@
 /*Для мелкого текста с датой в отзыве.*/
 /*Для слогана на маленьком баннере.*/
 /*Для заголовка компании в футере.*/
-/*Для меню в адаптивной версии.*//*# sourceMappingURL=style.css.map */
+/*Для меню в адаптивной версии.*/
+.questions {
+  max-width: 902px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-self: center;
+}
+
+@media (max-width: 930px) {
+  .questions {
+    margin: 0 20px 0 20px;
+  }
+}
+.questions__title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(3.6rem, 4.027vw, 5.8rem);
+  line-height: 120%;
+  text-align: center;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Accordion styles */
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tab {
+  width: 100%;
+  color: var(--secondary-color);
+  overflow: hidden;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 120%;
+  color: var(--secondary-color);
+  margin-bottom: 32px;
+}
+.tab .tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: var(--light-color);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 35px;
+  /* Icon */
+}
+.tab .tab-label .tab-label:hover {
+  background: wheat;
+}
+.tab .tab-label .tab-label::after {
+  content: "\f077";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.tab .tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: var(--main-font-color);
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 100%;
+  color: var(--main-font-color);
+  background: white;
+  transition: all 0.35s;
+}
+
+input:checked + .tab-label {
+  background: var(--secondary-color);
+  color: white;
+}
+input:checked + .tab-label::after {
+  transform: rotate(-90deg);
+}
+input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+.last-child {
+  margin-bottom: 0;
+}/*# sourceMappingURL=style.css.map */
