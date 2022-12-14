@@ -1,13 +1,17 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Raleway";
-  src: url("/assets/fonts/Raleway-Thin.eot");
-  src: url("/assets/fonts/Raleway-Thin.eot") format("embedded-opentype"), url("/assets/fonts/Raleway-Thin.woff2") format("woff2"), url("/assets/fonts/Raleway-Thin.woff") format("woff"), url("/assets/fonts/Raleway-Thin.ttf") format("truetype"), url("/assets/fonts/Raleway-Thin.otf") format("opentype");
+  src: url("/assets/fonts/Raleway-VariableFont_wght.eot");
+  src: url("/assets/fonts/Raleway-VariableFont_wght.eot")
+      format("embedded-opentype"),
+    url("/assets/fonts/Raleway-VariableFont_wght.woff2") format("woff2"),
+    url("/assets/fonts/Raleway-VariableFont_wght.woff") format("woff"),
+    url("/assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype"),
+    url("/assets/fonts/Raleway-VariableFont_wght.otf") format("opentype");
   font-weight: 300 800;
   font-style: normal;
 }
-/*Эти переменные можно использовать, например, так: color: var(--main-font-color);*/
-/*Задан размер шрифта по умолчанию 10px. Благодаря этому удобно указывать размер шрифта в rem: 16px = 1.6rem и т.д.*/
+
 :root {
   --background-color: #ffffff;
   --main-font-color: #1f1c1c;
@@ -17,19 +21,6 @@
   font-size: 10px;
 }
 
-/*Для всего обычного мелкого текста.*/
-/*Для мелкого текста в хедере, футере и Контактах. При использовании нужно дополнительно указать цвет через переменные выше.*/
-/*Для всех заголовков. При использовании нужно дополнительно указать цвет через переменные выше.*/
-/*Для мелкого текста после заголовка на оффере (главном баннере).*/
-/*Для кнопок.*/
-/*Для вертикального текста на оффере.*/
-/*Для заголовков (Причины быть покупателем) и вопросов (Часто задаваемые вопросы).*/
-/*Для заголовков (Продукция).*/
-/*Для имени (Отзывы). У этого элемента меняется размер шрифта в адаптиве, поэтому за исключением font-size этот миксин идентичен h5.*/
-/*Для мелкого текста с датой в отзыве.*/
-/*Для слогана на маленьком баннере.*/
-/*Для заголовка компании в футере.*/
-/*Для меню в адаптивной версии.*/
 .questions {
   max-width: 902px;
   display: flex;
@@ -124,4 +115,4 @@ input:checked ~ .tab-content {
 
 .last-child {
   margin-bottom: 0;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
