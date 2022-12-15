@@ -1,13 +1,17 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Raleway";
-  src: url("/assets/fonts/Raleway-Thin.eot");
-  src: url("/assets/fonts/Raleway-Thin.eot") format("embedded-opentype"), url("/assets/fonts/Raleway-Thin.woff2") format("woff2"), url("/assets/fonts/Raleway-Thin.woff") format("woff"), url("/assets/fonts/Raleway-Thin.ttf") format("truetype"), url("/assets/fonts/Raleway-Thin.otf") format("opentype");
+  src: url("/assets/fonts/Raleway-VariableFont_wght.eot");
+  src: url("/assets/fonts/Raleway-VariableFont_wght.eot")
+      format("embedded-opentype"),
+    url("/assets/fonts/Raleway-VariableFont_wght.woff2") format("woff2"),
+    url("/assets/fonts/Raleway-VariableFont_wght.woff") format("woff"),
+    url("/assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype"),
+    url("/assets/fonts/Raleway-VariableFont_wght.otf") format("opentype");
   font-weight: 300 800;
   font-style: normal;
 }
-/*Эти переменные можно использовать, например, так: color: var(--main-font-color);*/
-/*Задан размер шрифта по умолчанию 10px. Благодаря этому удобно указывать размер шрифта в rem: 16px = 1.6rem и т.д.*/
+
 :root {
   --background-color: #ffffff;
   --main-font-color: #1f1c1c;
@@ -17,16 +21,98 @@
   font-size: 10px;
 }
 
-/*Для всего обычного мелкого текста.*/
-/*Для мелкого текста в хедере, футере и Контактах. При использовании нужно дополнительно указать цвет через переменные выше.*/
-/*Для всех заголовков. При использовании нужно дополнительно указать цвет через переменные выше.*/
-/*Для мелкого текста после заголовка на оффере (главном баннере).*/
-/*Для кнопок.*/
-/*Для вертикального текста на оффере.*/
-/*Для заголовков (Причины быть покупателем) и вопросов (Часто задаваемые вопросы).*/
-/*Для заголовков (Продукция).*/
-/*Для имени (Отзывы). У этого элемента меняется размер шрифта в адаптиве, поэтому за исключением font-size этот миксин идентичен h5.*/
-/*Для мелкого текста с датой в отзыве.*/
-/*Для слогана на маленьком баннере.*/
-/*Для заголовка компании в футере.*/
-/*Для меню в адаптивной версии.*//*# sourceMappingURL=style.css.map */
+.questions {
+  max-width: 902px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-self: center;
+}
+
+@media (max-width: 930px) {
+  .questions {
+    margin: 0 20px 0 20px;
+  }
+}
+.questions__title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(3.6rem, 4.027vw, 5.8rem);
+  line-height: 120%;
+  text-align: center;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Accordion styles */
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tab {
+  width: 100%;
+  color: var(--secondary-color);
+  overflow: hidden;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 120%;
+  color: var(--secondary-color);
+  margin-bottom: 32px;
+}
+.tab .tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: var(--light-color);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 35px;
+  /* Icon */
+}
+.tab .tab-label .tab-label:hover {
+  background: wheat;
+}
+.tab .tab-label .tab-label::after {
+  content: "\f077";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.tab .tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: var(--main-font-color);
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 100%;
+  color: var(--main-font-color);
+  background: white;
+  transition: all 0.35s;
+}
+
+input:checked + .tab-label {
+  background: var(--secondary-color);
+  color: white;
+}
+input:checked + .tab-label::after {
+  transform: rotate(-90deg);
+}
+input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+.last-child {
+  margin-bottom: 0;
+} /*# sourceMappingURL=style.css.map */
