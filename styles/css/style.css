@@ -29,4 +29,443 @@
 /*Для мелкого текста с датой в отзыве.*/
 /*Для слогана на маленьком баннере.*/
 /*Для заголовка компании в футере.*/
-/*Для меню в адаптивной версии.*//*# sourceMappingURL=style.css.map */
+/*Для меню в адаптивной версии.*/
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.review {
+  max-width: clamp(320px, 81.25vw, 1170px);
+  margin: 0 auto;
+}
+.review__title {
+  display: flex;
+  justify-content: center;
+  padding-bottom: clamp(50px, 4.86vw, 70px);
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(3.6rem, 4.027vw, 5.8rem);
+  line-height: 120%;
+  color: var(--main-font-color);
+}
+.review__item {
+  height: fit-content;
+}
+.review__container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: clamp(270px, 62.64vw, 902px);
+  border-radius: 35px;
+  background-image: url("/assets/images/review_bg.jpg");
+  background-size: auto;
+  background-position: -550px -140px;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1170px) {
+  .review__container {
+    background-position: -620px -140px;
+  }
+}
+@media (max-width: 819px) {
+  .review__container {
+    width: 90vw;
+  }
+}
+@media (max-width: 420px) {
+  .review__container {
+    width: 100vw;
+    background-position: -600px -200px;
+  }
+}
+.review__field {
+  width: clamp(270px, 46.9vw, 676px);
+  height: 280px;
+  margin: 20px;
+  padding: clamp(20px, 2.22vw, 32px);
+  background: rgba(255, 255, 255, 0.4392156863);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+}
+@media (max-width: 1170px) {
+  .review__field {
+    width: 80%;
+  }
+}
+@media (max-width: 1023px) {
+  .review__field {
+    width: 100%;
+  }
+}
+@media (max-width: 819px) {
+  .review__field {
+    height: 245px;
+  }
+}
+@media (max-width: 767px) {
+  .review__field {
+    height: 295px;
+  }
+}
+@media (max-width: 612px) {
+  .review__field {
+    height: 315px;
+  }
+}
+@media (max-width: 570px) {
+  .review__field {
+    height: 335px;
+  }
+}
+@media (max-width: 507px) {
+  .review__field {
+    height: 365px;
+  }
+}
+@media (max-width: 455px) {
+  .review__field {
+    height: 385px;
+  }
+}
+@media (max-width: 420px) {
+  .review__field {
+    margin-top: 132px;
+  }
+}
+@media (max-width: 373px) {
+  .review__field {
+    height: 415px;
+  }
+}
+@media (max-width: 354px) {
+  .review__field {
+    height: 435px;
+  }
+}
+@media (max-width: 337px) {
+  .review__field {
+    height: 455px;
+  }
+}
+@media (max-width: 326px) {
+  .review__field {
+    height: 470px;
+  }
+}
+@media (max-width: 300px) {
+  .review__field {
+    height: 530px;
+  }
+}
+@media (max-width: 280px) {
+  .review__field {
+    height: 550px;
+    overflow: hidden;
+  }
+}
+.review__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.review__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .review__row {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+.review__user-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: clamp(10px, 1.38vw, 20px);
+}
+.review__name-and-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.review__avatar-bg {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+}
+.review__avatar-text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 120%;
+  color: var(--light-color);
+}
+.review__user-name {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1.8rem, 1.527vw, 2.2rem);
+  line-height: 120%;
+  color: var(--main-font-color);
+}
+.review__date {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 120%;
+  color: var(--main-font-color);
+}
+.review__rating {
+  display: flex;
+  gap: 5px;
+}
+@media (max-width: 767px) {
+  .review__rating {
+    margin-top: 20px;
+  }
+}
+.review__rating-item {
+  width: 12px;
+  height: 12px;
+  background-image: url("/assets/images/star.svg");
+  background-size: contain;
+}
+.review__text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 120%;
+  color: var(--main-font-color);
+  сolor: #000;
+}
+.review__arrow_prev {
+  background-image: url("/assets/images/arrow_prev.svg");
+}
+.review__arrow_next {
+  background-image: url("/assets/images/arrow_next.svg");
+}
+.review__arrow_prev, .review__arrow_next {
+  background-size: contain;
+  filter: invert(15%) sepia(63%) saturate(3827%) hue-rotate(340deg) brightness(84%) contrast(101%);
+}
+.review__arrow_prev:hover, .review__arrow_prev:focus, .review__arrow_next:hover, .review__arrow_next:focus {
+  filter: invert(10%) sepia(67%) saturate(5976%) hue-rotate(347deg) brightness(70%) contrast(99%);
+}
+
+.slider > input:nth-child(7):checked ~ .slider__next > label:nth-child(1), .slider > input:nth-child(7):checked ~ .slider__prev > label:nth-child(6), .slider > input:nth-child(6):checked ~ .slider__next > label:nth-child(7), .slider > input:nth-child(6):checked ~ .slider__prev > label:nth-child(5), .slider > input:nth-child(5):checked ~ .slider__next > label:nth-child(6), .slider > input:nth-child(5):checked ~ .slider__prev > label:nth-child(4), .slider > input:nth-child(4):checked ~ .slider__next > label:nth-child(5), .slider > input:nth-child(4):checked ~ .slider__prev > label:nth-child(3), .slider > input:nth-child(3):checked ~ .slider__next > label:nth-child(4), .slider > input:nth-child(3):checked ~ .slider__prev > label:nth-child(2), .slider > input:nth-child(2):checked ~ .slider__next > label:nth-child(3), .slider > input:nth-child(2):checked ~ .slider__prev > label:nth-child(1), .slider > input:nth-child(1):checked ~ .slider__next > label:nth-child(2), .slider > input:nth-child(1):checked ~ .slider__prev > label:nth-child(7) {
+  opacity: 1 !important;
+  z-index: 3;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.slider > input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.slider > input:checked ~ .slider__items .slider__item,
+.slider > input:checked ~ .slider__prev > label,
+.slider > input:checked ~ .slider__next > label {
+  opacity: 0;
+}
+.slider > input:nth-child(1):checked ~ .slider__items .slider__item:nth-child(1) {
+  opacity: 1;
+}
+.slider > input:nth-child(1):checked ~ .slider__nav > label:nth-child(1) {
+  background: #1F1C1C;
+  cursor: default;
+  pointer-events: none;
+}
+.slider > input:nth-child(2):checked ~ .slider__items .slider__item:nth-child(2) {
+  opacity: 1;
+}
+.slider > input:nth-child(2):checked ~ .slider__nav > label:nth-child(2) {
+  background: #1F1C1C;
+  cursor: default;
+  pointer-events: none;
+}
+.slider > input:nth-child(3):checked ~ .slider__items .slider__item:nth-child(3) {
+  opacity: 1;
+}
+.slider > input:nth-child(3):checked ~ .slider__nav > label:nth-child(3) {
+  background: #1F1C1C;
+  cursor: default;
+  pointer-events: none;
+}
+.slider > input:nth-child(4):checked ~ .slider__items .slider__item:nth-child(4) {
+  opacity: 1;
+}
+.slider > input:nth-child(4):checked ~ .slider__nav > label:nth-child(4) {
+  background: #1F1C1C;
+  cursor: default;
+  pointer-events: none;
+}
+.slider > input:nth-child(5):checked ~ .slider__items .slider__item:nth-child(5) {
+  opacity: 1;
+}
+.slider > input:nth-child(5):checked ~ .slider__nav > label:nth-child(5) {
+  background: #1F1C1C;
+  cursor: default;
+  pointer-events: none;
+}
+.slider > input:nth-child(6):checked ~ .slider__items .slider__item:nth-child(6) {
+  opacity: 1;
+}
+.slider > input:nth-child(6):checked ~ .slider__nav > label:nth-child(6) {
+  background: #1F1C1C;
+  cursor: default;
+  pointer-events: none;
+}
+.slider > input:nth-child(7):checked ~ .slider__items .slider__item:nth-child(7) {
+  opacity: 1;
+}
+.slider > input:nth-child(7):checked ~ .slider__nav > label:nth-child(7) {
+  background: #1F1C1C;
+  cursor: default;
+  pointer-events: none;
+}
+.slider__items {
+  position: relative;
+  height: 320px;
+  list-style-type: none;
+}
+@media (max-width: 819px) {
+  .slider__items {
+    height: 285px;
+  }
+}
+@media (max-width: 767px) {
+  .slider__items {
+    height: 335px;
+  }
+}
+@media (max-width: 612px) {
+  .slider__items {
+    height: 355px;
+  }
+}
+@media (max-width: 570px) {
+  .slider__items {
+    height: 385px;
+  }
+}
+@media (max-width: 507px) {
+  .slider__items {
+    height: 405px;
+  }
+}
+@media (max-width: 455px) {
+  .slider__items {
+    height: 425px;
+  }
+}
+@media (max-width: 420px) {
+  .slider__items {
+    height: 535px;
+  }
+}
+@media (max-width: 373px) {
+  .slider__items {
+    height: 565px;
+  }
+}
+@media (max-width: 354px) {
+  .slider__items {
+    height: 585px;
+  }
+}
+@media (max-width: 337px) {
+  .slider__items {
+    height: 605px;
+  }
+}
+@media (max-width: 326px) {
+  .slider__items {
+    height: 625px;
+  }
+}
+@media (max-width: 300px) {
+  .slider__items {
+    height: 685px;
+  }
+}
+@media (max-width: 280px) {
+  .slider__items {
+    height: 705px;
+  }
+}
+.slider__item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: opacity 0.7s;
+  -webkit-transition: opacity 0.7s;
+}
+.slider__prev > label, .slider__next > label {
+  position: absolute;
+  top: 43.96%;
+  transform: translate(0, -43.96%);
+  transition: 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  display: block;
+  width: clamp(32px, 4.44vw, 64px);
+  height: clamp(32px, 4.44vw, 64px);
+  cursor: pointer;
+  opacity: 0;
+}
+@media (max-width: 819px) {
+  .slider__prev > label, .slider__next > label {
+    top: 100%;
+  }
+}
+.slider__prev > label {
+  left: 0;
+}
+.slider__next > label {
+  right: 0;
+}
+.slider__nav {
+  display: flex;
+  column-gap: 5px;
+  justify-content: center;
+  margin-top: 32px;
+}
+.slider__nav > label {
+  display: block;
+  width: clamp(8px, 0.83vw, 12px);
+  height: clamp(8px, 0.83vw, 12px);
+  border: 2px solid #1F1C1C;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 2;
+}
+.slider__nav > label:hover {
+  border-color: #981322;
+}/*# sourceMappingURL=style.css.map */
