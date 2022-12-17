@@ -30,6 +30,99 @@
 /*Для слогана на маленьком баннере.*/
 /*Для заголовка компании в футере.*/
 /*Для меню в адаптивной версии.*/
+.products {
+  max-width: clamp(320px, 81.25vw, 1170px);
+  margin: 0 auto;
+  padding-bottom: clamp(70px, 2.26vh, 132px);
+}
+
+.products__title {
+  display: flex;
+  justify-content: center;
+  padding-bottom: clamp(50px, 4.86vw, 70px);
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(3.6rem, 4.027vw, 5.8rem);
+  line-height: 120%;
+  color: var(--main-font-color);
+}
+
+.products__card-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: -webkit-min-content -webkit-min-content;
+  grid-template-rows: min-content min-content;
+  gap: clamp(30px, 3.125vw, 45px);
+}
+@media (max-width: 899px) {
+  .products__card-container {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
+    grid-template-rows: min-content min-content min-content;
+  }
+}
+@media (max-width: 550px) {
+  .products__card-container {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.products__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(24px, 2.22vw, 32px);
+  border: 1px solid rgba(31, 28, 28, 0.2);
+  border-radius: 35px;
+}
+@media (max-width: 899px) {
+  .products__card {
+    padding: clamp(24px, 3.55vw, 32px);
+  }
+}
+@media (max-width: 550px) {
+  .products__card {
+    border: none;
+    padding-inline: 40px;
+  }
+}
+
+.products__card-image {
+  border-radius: 20px;
+  max-width: 100%;
+}
+
+.products__card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 296px;
+}
+
+.products__card-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 120%;
+  color: var(--main-font-color);
+  margin-top: 32px;
+  margin-bottom: 10px;
+}
+
+.products__card-description {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 120%;
+  color: var(--main-font-color);
+  text-align: center;
+  margin: 0;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
