@@ -43,22 +43,6 @@
   display: flex;
   justify-content: center;
   padding-bottom: clamp(50px, 4.86vw, 70px);
-=======
-.questions {
-  max-width: 902px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  align-self: center;
-}
-
-@media (max-width: 930px) {
-  .questions {
-    margin: 0 20px 0 20px;
-  }
-}
-.questions__title {
->>>>>>> ba02e1b7ec5781f09c3f5f76787dd04bec88d6b1
   font-family: "Raleway";
   font-style: normal;
   font-weight: 500;
@@ -67,6 +51,8 @@
   color: var(--main-font-color);
 }
 .review__item {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 .review__container {
@@ -102,7 +88,8 @@
   margin: 20px;
   padding: clamp(20px, 2.22vw, 32px);
   background: rgba(255, 255, 255, 0.4392156863);
-  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   border-radius: 20px;
 }
 @media (max-width: 1170px) {
@@ -202,7 +189,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  column-gap: clamp(10px, 1.38vw, 20px);
+  -moz-column-gap: clamp(10px, 1.38vw, 20px);
+       column-gap: clamp(10px, 1.38vw, 20px);
 }
 .review__name-and-date {
   display: flex;
@@ -468,7 +456,8 @@
 }
 .slider__nav {
   display: flex;
-  column-gap: 5px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
   justify-content: center;
   margin-top: 32px;
 }
@@ -486,19 +475,6 @@
   border-color: #981322;
 }
 
-/*Для всего обычного мелкого текста.*/
-/*Для мелкого текста в хедере, футере и Контактах. При использовании нужно дополнительно указать цвет через переменные выше.*/
-/*Для всех заголовков. При использовании нужно дополнительно указать цвет через переменные выше.*/
-/*Для мелкого текста после заголовка на оффере (главном баннере).*/
-/*Для кнопок.*/
-/*Для вертикального текста на оффере.*/
-/*Для заголовков (Причины быть покупателем) и вопросов (Часто задаваемые вопросы).*/
-/*Для заголовков (Продукция).*/
-/*Для имени (Отзывы). У этого элемента меняется размер шрифта в адаптиве, поэтому за исключением font-size этот миксин идентичен h5.*/
-/*Для мелкого текста с датой в отзыве.*/
-/*Для слогана на маленьком баннере.*/
-/*Для заголовка компании в футере.*/
-/*Для меню в адаптивной версии.*/
 .questions {
   max-width: 902px;
   display: flex;
@@ -519,6 +495,7 @@
   font-size: clamp(3.6rem, 4.027vw, 5.8rem);
   line-height: 120%;
   text-align: center;
+  margin-top: 10%;
 }
 
 .tab-ico {
@@ -543,6 +520,7 @@ input {
 .tabs {
   border-radius: 8px;
   overflow: hidden;
+  margin-top: 5%;
 }
 
 .tab {
@@ -562,12 +540,15 @@ input {
   grid-template-columns: 0.9fr 0.1fr;
   justify-content: space-between;
   align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
   padding-left: 1em;
   padding-right: 1em;
   background: var(--light-color);
   font-weight: bold;
   cursor: pointer;
   border-radius: 35px;
+  height: 100%;
 }
 @media (max-width: 700px) {
   .tab .tab-label {
@@ -634,6 +615,7 @@ input:checked ~ .tab-label .tab-ico {
 .contacts__block {
   grid-column: 1/2;
   grid-row: 2/3;
+  gap: 1em;
 }
 
 .map {
@@ -658,10 +640,11 @@ input:checked ~ .tab-label .tab-ico {
 .contact-item {
   display: flex;
   align-items: center;
+  padding-bottom: 1em;
 }
 
 .vk {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .contact-item_icon {

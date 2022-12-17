@@ -20,6 +20,7 @@
 .contacts__block{
     grid-column: 1/2;
     grid-row: 2/3;
+    gap:1em;
 }
 .map{
     width: 100%;
@@ -39,9 +40,10 @@
 .contact-item{
     display: flex;
     align-items: center;
+    padding-bottom: 1em;
 }
 .vk{
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 .contact-item_icon{
     width: 20px;
