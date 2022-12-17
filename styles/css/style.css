@@ -39,14 +39,24 @@
   margin: 0;
 }
 
+.banner__small__wrap {
+  background: #000;
+}
+
 .banner__small__img {
+  position: relative;
+  display: block;
   width: 100%;
+  height: 100%;
+  opacity: 0.6;
 }
 
 .banner__small__logo {
+  position: absolute;
+  display: flex;
   max-width: 276px;
-  margin-left: clamp(100px, 1.3rem, 135px);
-  margin-bottom: clamp(25px, 0.5rem, 30px);
+  margin-left: clamp(135px, 1.3rem, 138px);
+  margin-top: clamp(-255px, -1.2rem, -260px);
 }
 
 /*Для всего обычного мелкого текста.*/
