@@ -1,13 +1,17 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Raleway";
-  src: url("/assets/fonts/Raleway-Thin.eot");
-  src: url("/assets/fonts/Raleway-Thin.eot") format("embedded-opentype"), url("/assets/fonts/Raleway-Thin.woff2") format("woff2"), url("/assets/fonts/Raleway-Thin.woff") format("woff"), url("/assets/fonts/Raleway-Thin.ttf") format("truetype"), url("/assets/fonts/Raleway-Thin.otf") format("opentype");
+  src: url("/assets/fonts/Raleway-VariableFont_wght.eot");
+  src: url("/assets/fonts/Raleway-VariableFont_wght.eot")
+      format("embedded-opentype"),
+    url("/assets/fonts/Raleway-VariableFont_wght.woff2") format("woff2"),
+    url("/assets/fonts/Raleway-VariableFont_wght.woff") format("woff"),
+    url("/assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype"),
+    url("/assets/fonts/Raleway-VariableFont_wght.otf") format("opentype");
   font-weight: 300 800;
   font-style: normal;
 }
-/*Эти переменные можно использовать, например, так: color: var(--main-font-color);*/
-/*Задан размер шрифта по умолчанию 10px. Благодаря этому удобно указывать размер шрифта в rem: 16px = 1.6rem и т.д.*/
+
 :root {
   --background-color: #ffffff;
   --main-font-color: #1f1c1c;
@@ -17,6 +21,7 @@
   font-size: 10px;
 }
 
+<<<<<<< HEAD
 /*Для всего обычного мелкого текста.*/
 /*Для мелкого текста в хедере, футере и Контактах. При использовании нужно дополнительно указать цвет через переменные выше.*/
 /*Для всех заголовков. При использовании нужно дополнительно указать цвет через переменные выше.*/
@@ -43,11 +48,28 @@
   display: flex;
   justify-content: center;
   padding-bottom: clamp(50px, 4.86vw, 70px);
+=======
+.questions {
+  max-width: 902px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-self: center;
+}
+
+@media (max-width: 930px) {
+  .questions {
+    margin: 0 20px 0 20px;
+  }
+}
+.questions__title {
+>>>>>>> ba02e1b7ec5781f09c3f5f76787dd04bec88d6b1
   font-family: "Raleway";
   font-style: normal;
   font-weight: 500;
   font-size: clamp(3.6rem, 4.027vw, 5.8rem);
   line-height: 120%;
+<<<<<<< HEAD
   color: var(--main-font-color);
 }
 .review__item {
@@ -469,3 +491,26 @@
 .slider__nav > label:hover {
   border-color: #981322;
 }/*# sourceMappingURL=style.css.map */
+=======
+  line-height: 100%;
+  color: var(--main-font-color);
+  background: white;
+  transition: all 0.35s;
+}
+
+input:checked + .tab-label {
+  background: var(--secondary-color);
+  color: white;
+}
+input:checked + .tab-label::after {
+  transform: rotate(-90deg);
+}
+input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+.last-child {
+  margin-bottom: 0;
+} /*# sourceMappingURL=style.css.map */
+>>>>>>> ba02e1b7ec5781f09c3f5f76787dd04bec88d6b1
