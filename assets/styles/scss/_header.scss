@@ -1,0 +1,96 @@
+.header {
+    max-width: 1172px;
+    max-height: 146px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header__contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__contacts-item {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.header-link {
+    font-family: 'Raleway';
+    text-decoration: none;
+    color: #1F1C1C;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.header-link-menu {
+    margin-left: 3rem;
+}
+
+.header-icon {
+    margin-right: 0.6rem;
+}
+
+a:hover {
+    color: #981322;
+}
+
+.features {
+    margin-bottom: 13.2rem
+}
+
+.features__row_1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features__row_2 {
+    display: flex;
+    justify-content: space-between;
+    max-width: 870px;
+    margin: 0 auto;
+}
+
+.features__title {
+    @include h1;
+    text-align: center;
+    max-width: 891px;
+    margin: 0 auto;
+    margin-top: 13.2rem;
+    margin-bottom: 7rem;
+}
+
+.features__cards {
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.features__card {
+    display: flex;
+    flex-direction: column;
+    max-width: 270px;
+    max-height: 57px;
+    align-items: center;
+}
+
+.features__card-title {
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #981322;
+    margin-bottom: 1.8rem;
+}
+
+.features__card-text {
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #1F1C1C;
+    text-align: center;
+}
+
+.features-icon {
+    margin-bottom: 2rem;
+}

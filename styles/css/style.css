@@ -2,16 +2,12 @@
 @font-face {
   font-family: "Raleway";
   src: url("/assets/fonts/Raleway-VariableFont_wght.eot");
-  src: url("/assets/fonts/Raleway-VariableFont_wght.eot")
-      format("embedded-opentype"),
-    url("/assets/fonts/Raleway-VariableFont_wght.woff2") format("woff2"),
-    url("/assets/fonts/Raleway-VariableFont_wght.woff") format("woff"),
-    url("/assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype"),
-    url("/assets/fonts/Raleway-VariableFont_wght.otf") format("opentype");
+  src: url("/assets/fonts/Raleway-VariableFont_wght.eot") format("embedded-opentype"), url("/assets/fonts/Raleway-VariableFont_wght.woff2") format("woff2"), url("/assets/fonts/Raleway-VariableFont_wght.woff") format("woff"), url("/assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype"), url("/assets/fonts/Raleway-VariableFont_wght.otf") format("opentype");
   font-weight: 300 800;
   font-style: normal;
 }
-
+/*Эти переменные можно использовать, например, так: color: var(--main-font-color);*/
+/*Задан размер шрифта по умолчанию 10px. Благодаря этому удобно указывать размер шрифта в rem: 16px = 1.6rem и т.д.*/
 :root {
   --background-color: #ffffff;
   --main-font-color: #1f1c1c;
@@ -19,6 +15,120 @@
   --light-color: #fae5d2;
   --light-color-transparent: rgba(250, 229, 210, 0.4);
   font-size: 10px;
+}
+
+/*Для всего обычного мелкого текста.*/
+/*Для мелкого текста в хедере, футере и Контактах. При использовании нужно дополнительно указать цвет через переменные выше.*/
+/*Для всех заголовков. При использовании нужно дополнительно указать цвет через переменные выше.*/
+/*Для мелкого текста после заголовка на оффере (главном баннере).*/
+/*Для кнопок.*/
+/*Для вертикального текста на оффере.*/
+/*Для заголовков (Причины быть покупателем) и вопросов (Часто задаваемые вопросы).*/
+/*Для заголовков (Продукция).*/
+/*Для имени (Отзывы). У этого элемента меняется размер шрифта в адаптиве, поэтому за исключением font-size этот миксин идентичен h5.*/
+/*Для мелкого текста с датой в отзыве.*/
+/*Для слогана на маленьком баннере.*/
+/*Для заголовка компании в футере.*/
+/*Для меню в адаптивной версии.*/
+.header {
+  max-width: 1172px;
+  max-height: 146px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.header__contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__contacts-item {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.header-link {
+  font-family: "Raleway";
+  text-decoration: none;
+  color: #1F1C1C;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.header-link-menu {
+  margin-left: 3rem;
+}
+
+.header-icon {
+  margin-right: 0.6rem;
+}
+
+a:hover {
+  color: #981322;
+}
+
+.features {
+  margin-bottom: 13.2rem;
+}
+
+.features__row_1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features__row_2 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 870px;
+  margin: 0 auto;
+}
+
+.features__title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(3.6rem, 4.027vw, 5.8rem);
+  line-height: 120%;
+  text-align: center;
+  max-width: 891px;
+  margin: 0 auto;
+  margin-top: 13.2rem;
+  margin-bottom: 7rem;
+}
+
+.features__cards {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.features__card {
+  display: flex;
+  flex-direction: column;
+  max-width: 270px;
+  max-height: 57px;
+  align-items: center;
+}
+
+.features__card-title {
+  font-family: "Raleway";
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #981322;
+  margin-bottom: 1.8rem;
+}
+
+.features__card-text {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #1F1C1C;
+  text-align: center;
+}
+
+.features-icon {
+  margin-bottom: 2rem;
 }
 
 .questions {
@@ -115,4 +225,4 @@ input:checked ~ .tab-content {
 
 .last-child {
   margin-bottom: 0;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
