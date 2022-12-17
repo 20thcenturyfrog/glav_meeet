@@ -1,14 +1,4 @@
-@font-face {
-    font-family: "Raleway";
-    src: url("/assets/fonts/Raleway-Thin.eot");
-    src: url("/assets/fonts/Raleway-Thin.eot") format("embedded-opentype"),
-      url("/assets/fonts/Raleway-Thin.woff2") format("woff2"),
-      url("/assets/fonts/Raleway-Thin.woff") format("woff"),
-      url("/assets/fonts/Raleway-Thin.ttf") format("truetype"),
-      url("/assets/fonts/Raleway-Thin.otf") format("opentype");
-    font-weight: 300 800;
-    font-style: normal;
-  }
+@font-face {  font-family: "Raleway";  src: url("/assets/fonts/Raleway-VariableFont_wght.eot");  src: url("/assets/fonts/Raleway-VariableFont_wght.eot")      format("embedded-opentype"),    url("/assets/fonts/Raleway-VariableFont_wght.woff2") format("woff2"),    url("/assets/fonts/Raleway-VariableFont_wght.woff") format("woff"),    url("/assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype"),    url("/assets/fonts/Raleway-VariableFont_wght.otf") format("opentype");  font-weight: 300 800;  font-style: normal;}
   
   /*Эти переменные можно использовать, например, так: color: var(--main-font-color);*/
   
