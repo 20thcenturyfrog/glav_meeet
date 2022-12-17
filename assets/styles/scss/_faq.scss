@@ -14,6 +14,19 @@
 .questions__title{
   @include h1;
   text-align: center;
+  margin-top: 10%;
+}
+
+.tab-ico {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-image: url('/assets/images/arrow.svg');
+  filter: invert(15%) sepia(63%) saturate(3827%) hue-rotate(340deg) brightness(84%) contrast(101%);
+  transition: all .35s;
+  background-repeat: no-repeat;
+  justify-self: end;
 }
 
 input {
@@ -25,6 +38,7 @@ input {
 .tabs {
   border-radius: 8px;
   overflow: hidden;
+  margin-top: 5%;
   
 }
 .tab {
@@ -35,26 +49,25 @@ input {
   margin-bottom: 32px;
   
   .tab-label {
-    display: flex;
+    display: grid;
+    grid-template-columns: 0.9fr 0.1fr;
     justify-content: space-between;
-    padding: 1em;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
     background: var(--light-color);
     font-weight: bold;
     cursor: pointer;
     border-radius: 35px;
-    /* Icon */
-    .tab-label:hover {
-      background: wheat;
-    }
-    .tab-label::after {
-      content: "\f077";
-      width: 1em;
-      height: 1em;
-      text-align: center;
-      transition: all .35s;
-      
-    }
+    height: 100%;
   }
+  @media(max-width:700px){
+  .tab-label{
+    border-radius: 20px;
+  }
+}
   .tab-content {
     max-height: 0;
     padding: 0 1em;
@@ -69,21 +82,20 @@ input {
 input:checked {
   + .tab-label {
     background: var(--secondary-color);
-    color: white;
-    &::after {
-      transform: rotate(-90deg);
-    }
+    color: var(--light-color);
   }
   ~ .tab-content {
     max-height: 100vh;
     padding: 1em;
   }
+
+  ~ .tab-label .tab-ico {
+      transform: rotate(-180deg);
+      filter: invert(85%) sepia(9%) saturate(763%) hue-rotate(330deg) brightness(110%) contrast(96%);
+      background-repeat: no-repeat;
+
+  }
 }
 .last-child{
   margin-bottom: 0;
 }
-
-
-
-
-
