@@ -10,7 +10,6 @@
   font-weight: 300 800;
   font-style: normal;
 }
-
 /*Эти переменные можно использовать, например, так: color: var(--main-font-color);*/
 
 /*Задан размер шрифта по умолчанию 10px. Благодаря этому удобно указывать размер шрифта в rem: 16px = 1.6rem и т.д.*/
@@ -31,7 +30,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 100%;
+  line-height: 120%;
   color: var(--main-font-color);
 }
 
@@ -117,7 +116,7 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 600;
-  font-size: clamp(1.6rem, 1.527vw, 2.2rem);
+  font-size: clamp(1.8rem, 1.527vw, 2.2rem);
   line-height: 120%;
   color: var(--main-font-color);
 }
@@ -139,7 +138,7 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 500;
-  font-size: var(2.2rem, 2.5vw, 3.6rem);
+  font-size: clamp(2.2rem, 2.5vw, 3.6rem);
   line-height: 100%;
   color: var(--light-color);
 }
