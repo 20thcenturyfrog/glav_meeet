@@ -30,10 +30,138 @@
 /*Для слогана на маленьком баннере.*/
 /*Для заголовка компании в футере.*/
 /*Для меню в адаптивной версии.*/
+.offer {
+  background-image: url("/assets/images/offer.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: clamp(70px, 3.01vh, 176px);
+}
+@media (max-width: 730px) {
+  .offer {
+    background-image: url("/assets/images/offer_mobile.jpg");
+  }
+}
+
+.offer__background {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.offer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: clamp(335px, 81.25vw, 1170px);
+  margin: 0 auto;
+  padding: clamp(96px, 2.07vh, 121px) 0;
+}
+
+.offer__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 542px;
+}
+@media (max-width: 730px) {
+  .offer__content-wrapper {
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.offer__headline {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(3.6rem, 4.027vw, 5.8rem);
+  line-height: 120%;
+  color: var(--light-color);
+  margin: 0;
+}
+
+.offer__description {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 1.527vw, 2.2rem);
+  line-height: 150%;
+  color: var(--light-color);
+}
+
+.offer__buttons {
+  display: flex;
+  gap: clamp(20px, 2.77vw, 40px);
+  margin-top: 18px;
+}
+@media (max-width: 597px) {
+  .offer__buttons {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+.offer__button {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.6rem;
+  line-height: 100%;
+  color: var(--light-color);
+  padding: 20px 63px;
+  border-radius: 35px;
+}
+
+.offer__button:hover {
+  border: 2px solid var(--light-color);
+  background: var(--light-color);
+  color: var(--secondary-color);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.offer__button_products {
+  border: 2px solid var(--secondary-color);
+  background: var(--secondary-color);
+}
+
+.offer__button_where-to-buy {
+  border: 2px solid var(--light-color);
+  background: transparent;
+}
+
+.offer__scroll-down-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 15px;
+}
+@media (max-width: 730px) {
+  .offer__scroll-down-wrapper {
+    display: none;
+  }
+}
+
+.offer__scroll-down-text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 100%;
+  color: #fdfdfd;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.offer__scroll-down-arrow {
+  width: 0.8rem;
+}
+
 .products {
   max-width: clamp(320px, 81.25vw, 1170px);
   margin: 0 auto;
-  padding-bottom: clamp(70px, 2.26vh, 132px);
+  margin-bottom: clamp(70px, 3.01vh, 176px);
 }
 
 .products__title {
@@ -62,7 +190,7 @@
     grid-template-rows: min-content min-content min-content;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 597px) {
   .products__card-container {
     display: block;
     margin: 0 auto;
@@ -82,7 +210,7 @@
     padding: clamp(24px, 3.55vw, 32px);
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 597px) {
   .products__card {
     border: none;
     padding-inline: 40px;
@@ -389,7 +517,7 @@
   opacity: 1;
 }
 .slider > input:nth-child(1):checked ~ .slider__nav > label:nth-child(1) {
-  background: #1F1C1C;
+  background: #1f1c1c;
   cursor: default;
   pointer-events: none;
 }
@@ -397,7 +525,7 @@
   opacity: 1;
 }
 .slider > input:nth-child(2):checked ~ .slider__nav > label:nth-child(2) {
-  background: #1F1C1C;
+  background: #1f1c1c;
   cursor: default;
   pointer-events: none;
 }
@@ -405,7 +533,7 @@
   opacity: 1;
 }
 .slider > input:nth-child(3):checked ~ .slider__nav > label:nth-child(3) {
-  background: #1F1C1C;
+  background: #1f1c1c;
   cursor: default;
   pointer-events: none;
 }
@@ -413,7 +541,7 @@
   opacity: 1;
 }
 .slider > input:nth-child(4):checked ~ .slider__nav > label:nth-child(4) {
-  background: #1F1C1C;
+  background: #1f1c1c;
   cursor: default;
   pointer-events: none;
 }
@@ -421,7 +549,7 @@
   opacity: 1;
 }
 .slider > input:nth-child(5):checked ~ .slider__nav > label:nth-child(5) {
-  background: #1F1C1C;
+  background: #1f1c1c;
   cursor: default;
   pointer-events: none;
 }
@@ -429,7 +557,7 @@
   opacity: 1;
 }
 .slider > input:nth-child(6):checked ~ .slider__nav > label:nth-child(6) {
-  background: #1F1C1C;
+  background: #1f1c1c;
   cursor: default;
   pointer-events: none;
 }
@@ -437,7 +565,7 @@
   opacity: 1;
 }
 .slider > input:nth-child(7):checked ~ .slider__nav > label:nth-child(7) {
-  background: #1F1C1C;
+  background: #1f1c1c;
   cursor: default;
   pointer-events: none;
 }
@@ -558,7 +686,7 @@
   display: block;
   width: clamp(8px, 0.83vw, 12px);
   height: clamp(8px, 0.83vw, 12px);
-  border: 2px solid #1F1C1C;
+  border: 2px solid #1f1c1c;
   border-radius: 50%;
   cursor: pointer;
   transition: 0.3s;
@@ -571,8 +699,9 @@
 .banner-small {
   background-image: url("/assets/images/banner.jpg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  margin-bottom: clamp(70px, 2.26vh, 132px);
+  margin-top: clamp(112px, 3.01vh, 176px);
 }
 @media (max-width: 550px) {
   .banner-small {
@@ -580,20 +709,25 @@
   }
 }
 
+.banner-small__background {
+  background: rgba(0, 0, 0, 0.4);
+}
+
 .banner-small__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 29px;
-  padding-inline: clamp(30px, 9.375vw, 135px);
-  background: rgba(0, 0, 0, 0.4);
+  max-width: clamp(335px, 81.25vw, 1170px);
+  margin: 0 auto;
+  padding: 29px 0;
 }
 @media (max-width: 550px) {
   .banner-small__wrapper {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    padding: 62px 20px;
+    margin: 0 auto;
+    padding: 62px 0;
   }
 }
 
@@ -647,7 +781,7 @@
   font-size: clamp(3.6rem, 4.027vw, 5.8rem);
   line-height: 120%;
   text-align: center;
-  margin-top: clamp(70px, 2.26vh, 132px);
+  margin-top: clamp(70px, 3.01vh, 176px);
 }
 
 .tab-ico {
@@ -740,7 +874,7 @@ input:checked ~ .tab-label .tab-ico {
 }
 
 .contacts {
-  margin-top: 151px;
+  margin-top: clamp(70px, 3.01vh, 176px);
   background-color: var(--light-color);
   border-radius: 50px 50px 0px 0px;
 }

@@ -1,7 +1,7 @@
 .products {
   max-width: clamp(320px, 81.25vw, 1170px);
   margin: 0 auto;
-  padding-bottom: clamp(70px, 2.26vh, 132px);
+  margin-bottom: clamp(70px, 3.01vh, 176px);
 }
 
 .products__title {
@@ -23,7 +23,7 @@
     grid-template-rows: min-content min-content min-content;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 597px) {
     display: block;
     margin: 0 auto;
   }
@@ -41,7 +41,7 @@
     padding: clamp(24px, 3.55vw, 32px);
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 597px) {
     border: none;
     padding-inline: 40px;
   }

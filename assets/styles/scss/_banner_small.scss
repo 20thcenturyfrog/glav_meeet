@@ -1,27 +1,33 @@
 .banner-small {
   background-image: url("/assets/images/banner.jpg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  margin-bottom: clamp(70px, 2.26vh, 132px);
+  margin-top: clamp(112px, 3.01vh, 176px);
 
   @media (max-width: 550px) {
     background-image: url("/assets/images/banner_mobile.png");
   }
 }
 
+.banner-small__background {
+  background: rgba(0, 0, 0, 0.4);
+}
+
 .banner-small__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 29px;
-  padding-inline: clamp(30px, 9.375vw, 135px);
-  background: rgba(0, 0, 0, 0.4);
+  max-width: clamp(335px, 81.25vw, 1170px);
+  margin: 0 auto;
+  padding: 29px 0;
 
   @media (max-width: 550px) {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    padding: 62px 20px;
+    margin: 0 auto;
+    padding: 62px 0;
   }
 }
 
