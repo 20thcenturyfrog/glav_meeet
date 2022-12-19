@@ -10,19 +10,42 @@
   </head>
   <body>
     <main>
-      <section class="banner-small">
-        <div class="banner-small__wrapper">
-          <img
-            class="banner-small__logo"
-            src="./assets/images/logo_banner.svg"
-            alt="Логотип"
-          />
-          <p class="banner-small__slogan">
-            Не повышаем цены для тех, кто выбирает качество
-          </p>
+      <section class="offer">
+        <div class="offer__background">
+          <div class="offer__wrapper">
+            <div class="offer__content-wrapper">
+              <h1 class="offer__headline">
+                Магазин фермерского мяса<br />«Главный мясной»
+              </h1>
+              <p class="offer__description">
+                Широкий ассортимент фермерской продукции<br />без вредных
+                химикатов и консервантов
+              </p>
+              <div class="offer__buttons">
+                <a href="#products" class="offer__button-link"
+                  ><button class="offer__button offer__button_products">
+                    ПРОДУКЦИЯ
+                  </button></a
+                >
+                <a href="#contacts" class="offer__button-link"
+                  ><button class="offer__button offer__button_where-to-buy">
+                    ГДЕ КУПИТЬ
+                  </button></a
+                >
+              </div>
+            </div>
+            <div class="offer__scroll-down-wrapper">
+              <img
+                src="/assets/images/arrow_down.svg"
+                alt="↓"
+                class="offer__scroll-down-arrow"
+              />
+              <div class="offer__scroll-down-text">Листайте вниз</div>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="products">
+      <section class="products" id="products">
         <h2 class="products__title">Продукция</h2>
         <div class="products__card-container">
           <div class="products__card">
@@ -404,7 +427,20 @@
           </div>
         </div>
       </section>
-
+      <section class="banner-small">
+        <div class="banner-small__background">
+          <div class="banner-small__wrapper">
+            <img
+              class="banner-small__logo"
+              src="./assets/images/logo_banner.svg"
+              alt="Логотип"
+            />
+            <p class="banner-small__slogan">
+              Не повышаем цены для тех,<br />кто выбирает качество
+            </p>
+          </div>
+        </div>
+      </section>
       <section class="questions">
         <h2 class="questions__title">Часто задаваемые вопросы</h2>
         <div class="tabs">
@@ -533,7 +569,7 @@
           </div>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="contacts-container">
           <h1 class="contacts__title">Контакты</h1>
           <div class="contacts__block">

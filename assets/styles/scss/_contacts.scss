@@ -1,5 +1,5 @@
 .contacts {
-  margin-top: 151px;
+  margin-top: clamp(70px, 3.01vh, 176px);
   background-color: var(--light-color);
   border-radius: 50px 50px 0px 0px;
 }
