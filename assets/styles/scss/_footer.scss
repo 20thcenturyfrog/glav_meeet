@@ -1,0 +1,48 @@
+footer {
+    display: flex;
+    max-width: 1440px;
+    height: 23.6rem;
+    align-items: center;
+    flex-direction: row;
+    background-color:  #981322;
+}
+.footer__row {
+    width: 117rem;
+    height: 13.6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+.footer__logo {
+    display: flex;
+    flex-direction: column;
+}
+.footer__logo p {
+    @mixin footer-name {
+        
+    }
+}
+.footer__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: auto;
+}
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+}
+.footer__menu {
+    color: --light-color;
+    text-decoration: none;
+}
+.footer__menu a,
+.footer__contacts__address,
+.footer__contacts__message,
+.footer__contacts__social {
+    @include main-bolder {
+    color: var(--light-color);
+    }
+}
