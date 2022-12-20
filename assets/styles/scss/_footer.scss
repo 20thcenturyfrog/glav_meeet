@@ -28,10 +28,8 @@ footer {
     width: 12rem;
     height: 10rem;
 }
-.footer__logo p {
-    @include main-bolder {
-    }
-}
+.footer__logo p 
+    
 .footer__menu {
     display: flex;
     flex-direction: column;
