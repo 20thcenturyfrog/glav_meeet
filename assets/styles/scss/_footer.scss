@@ -19,9 +19,9 @@ footer {
     display: flex;
     flex-direction: column;
 }
+
 .footer__logo p {
     @mixin footer-name {
-        
     }
 }
 .footer__menu {
@@ -34,15 +34,12 @@ footer {
     display: flex;
     flex-direction: column;
 }
-.footer__menu {
-    color: --light-color;
-    text-decoration: none;
-}
+
 .footer__menu a,
 .footer__contacts__address,
 .footer__contacts__message,
 .footer__contacts__social {
     @include main-bolder {
-    color: var(--light-color);
+    color: var();
     }
 }
