@@ -1058,4 +1058,176 @@ input:checked ~ .tab-label .tab-ico {
     flex-direction: column;
     align-items: stretch;
   }
+}
+footer {
+  display: flex;
+  max-width: 1440px;
+  height: 23.6rem;
+  align-items: center;
+  flex-direction: row;
+  background-color: #981322;
+}
+
+.footer__row {
+  width: 117rem;
+  height: 13.6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer__logo {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5rem;
+  margin-right: 1rem;
+  align-items: center;
+}
+
+.footer__logo__img {
+  box-sizing: border-box;
+  background-image: url("/assets/images/logo_footer.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 15rem;
+  height: 12rem;
+}
+
+.footer__logo p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(1.6rem, 1.527vw, 2.2rem);
+  line-height: 100%;
+  color: var(--light-color);
+  padding-left: 3rem;
+  padding-right: 2rem;
+}
+
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5rem;
+  margin-left: 2rem;
+}
+
+.footer__menu__reasons,
+.footer__menu__faq,
+.footer__menu__feedback,
+.footer__menu__products,
+.footer__menu__contacts {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 100%;
+  text-decoration: none;
+  color: var(--light-color);
+  padding-bottom: 1.4rem;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  padding-left: 7rem;
+  padding-right: 3rem;
+}
+
+.footer__contacts__address,
+.footer__contacts__message,
+.footer__contacts__social {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__contacts__map__icon {
+  width: 1.4rem;
+  height: 2rem;
+  box-sizing: border-box;
+  background-image: url("/assets/images/map_label_icon.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #FAE5D2;
+  padding-left: 3rem;
+}
+
+.footer__contacts__phone__icon {
+  width: 1.4rem;
+  height: 2rem;
+  box-sizing: border-box;
+  background-image: url(/assets/images/phone_icon.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #FAE5D2;
+  padding-left: 3rem;
+}
+
+.footer__contacts__wa__icon {
+  width: 1.4rem;
+  height: 2rem;
+  box-sizing: border-box;
+  background-image: url(/assets/images/whatsap_icon.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #FAE5D2;
+  padding-left: 3rem;
+}
+
+.footer__contacts__vk__icon {
+  width: 1.4rem;
+  height: 2rem;
+  box-sizing: border-box;
+  background-image: url(/assets/images/vk_icon.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #FAE5D2;
+  padding-left: 3rem;
+}
+
+.footer__contacts__address,
+.footer__contacts__message,
+.footer__contacts__social {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 100%;
+  color: var(--light-color);
+  padding-bottom: 1.6rem;
+}
+
+.footer__contacts__social a {
+  text-decoration: none;
+  color: #FAE5D2;
+}
+
+@media (max-width: 1199px) {
+  .footer__logo {
+    max-width: 80vw;
+    max-width: 80vh;
+  }
+}
+@media (max-width: 899px) {
+  .footer__logo {
+    max-width: 60vw;
+    max-width: 60vh;
+  }
+}
+@media (max-width: 767px) {
+  .footer__logo {
+    max-width: 50vw;
+    max-width: 50vh;
+  }
+}
+@media (max-width: 575px) {
+  .footer__logo {
+    max-width: 40vw;
+    max-width: 40vh;
+  }
 }/*# sourceMappingURL=style.css.map */
