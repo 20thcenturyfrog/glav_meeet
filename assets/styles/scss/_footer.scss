@@ -13,15 +13,23 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin: auto;
+    margin: 5rem;
 }
 .footer__logo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin-left: 11rem;
 }
-
+.footer__logo__img {
+    background-image: url(/assets/images/logo_footer.svg);
+    background-size: cover;
+    background-position: center;
+    background-size: no-repeat;
+    width: 12rem;
+    height: 10rem;
+}
 .footer__logo p {
-    @mixin footer-name {
+    @include main-bolder {
     }
 }
 .footer__menu {

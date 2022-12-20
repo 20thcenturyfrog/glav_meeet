@@ -1080,16 +1080,34 @@ footer {
 
 .footer__logo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+.footer__logo__img {
+  background-image: url(/assets/images/logo_footer.svg);
+  background-size: cover;
+  background-position: center;
+  background-size: no-repeat;
+  width: 12rem;
+  height: 10rem;
 }
 
 .footer__menu {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: auto;
 }
-
+.footer__logo p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 100%;
+  color:#fae5d2;
+  margin-right: 11.3rem;
+  margin-right: 2rem;
+  text-align: left;
+  align-self: center;
+}
 .footer__contacts {
   display: flex;
   flex-direction: column;
@@ -1104,4 +1122,5 @@ footer {
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 100%;
+  color:#fae5d2;
 }/*# sourceMappingURL=style.css.map */
