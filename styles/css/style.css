@@ -1061,16 +1061,16 @@ input:checked ~ .tab-label .tab-ico {
 }
 footer {
   display: flex;
-  max-width: 1440px;
-  height: 23.6rem;
+  max-width: 100vw;
+  min-height: 236px;
   align-items: center;
   flex-direction: row;
+  justify-content: space-around;
   background-color: #981322;
 }
 
 .footer__row {
   width: 117rem;
-  height: 13.6rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1080,8 +1080,8 @@ footer {
 .footer__logo {
   display: flex;
   flex-direction: row;
-  margin-left: 5rem;
-  margin-right: 1rem;
+  margin-left: clamp(50px, 5rem, 60px);
+  margin-right: clamp(10px, 1rem, 15px);
   align-items: center;
 }
 
@@ -1102,15 +1102,15 @@ footer {
   font-size: clamp(1.6rem, 1.527vw, 2.2rem);
   line-height: 100%;
   color: var(--light-color);
-  padding-left: 3rem;
-  padding-right: 2rem;
+  padding-left: clamp(30px, 3rem, 40px);
+  padding-right: clamp(20px, 2rem, 25px);
 }
 
 .footer__menu {
   display: flex;
   flex-direction: column;
-  margin-right: 5rem;
-  margin-left: 2rem;
+  margin-right: clamp(-25px, -5rem, -50px);
+  margin-left: clamp(20px, 2rem, 25px);
 }
 
 .footer__menu__reasons,
@@ -1125,14 +1125,14 @@ footer {
   line-height: 100%;
   text-decoration: none;
   color: var(--light-color);
-  padding-bottom: 1.4rem;
+  padding-bottom: clamp(10px, 1.4rem, 14px);
 }
 
 .footer__contacts {
   display: flex;
   flex-direction: column;
-  padding-left: 7rem;
-  padding-right: 3rem;
+  padding-left: clamp(60px, 7rem, 120px);
+  padding-right: clamp(40px, 3rem, 50px);
 }
 
 .footer__contacts__address,
@@ -1140,54 +1140,51 @@ footer {
 .footer__contacts__social {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .footer__contacts__map__icon {
   width: 1.4rem;
   height: 2rem;
   box-sizing: border-box;
-  background-image: url("/assets/images/map_label_icon.svg");
+  background-image: url("/assets/images/map_icon_footer.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #FAE5D2;
-  padding-left: 3rem;
+  padding-left: clamp(40px, 3rem, 50px);
 }
 
 .footer__contacts__phone__icon {
-  width: 1.4rem;
+  width: 1.5rem;
   height: 2rem;
   box-sizing: border-box;
-  background-image: url(/assets/images/phone_icon.svg);
+  background-image: url(/assets/images/phone_icon_footer.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #FAE5D2;
-  padding-left: 3rem;
+  padding-left: clamp(10px, 3rem, 12px);
 }
 
 .footer__contacts__wa__icon {
-  width: 1.4rem;
+  width: 2.5rem;
   height: 2rem;
   box-sizing: border-box;
-  background-image: url(/assets/images/whatsap_icon.svg);
+  background-image: url(/assets/images/whatsapp_icon_footer.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #FAE5D2;
-  padding-left: 3rem;
+  padding-left: clamp(40px, 3rem, 50px);
 }
 
 .footer__contacts__vk__icon {
-  width: 1.4rem;
+  width: 2rem;
   height: 2rem;
   box-sizing: border-box;
-  background-image: url(/assets/images/vk_icon.svg);
+  background-image: url(/assets/images/vk_icon_footer.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #FAE5D2;
-  padding-left: 3rem;
+  padding-left: clamp(40px, 3rem, 50px);
 }
 
 .footer__contacts__address,
@@ -1207,27 +1204,23 @@ footer {
   color: #FAE5D2;
 }
 
-@media (max-width: 1199px) {
-  .footer__logo {
-    max-width: 80vw;
-    max-width: 80vh;
-  }
-}
-@media (max-width: 899px) {
-  .footer__logo {
-    max-width: 60vw;
-    max-width: 60vh;
-  }
-}
 @media (max-width: 767px) {
+  .footer__row {
+    flex-direction: column;
+    margin-top: clamp(10px, 1rem, 15px);
+  }
   .footer__logo {
     max-width: 50vw;
-    max-width: 50vh;
+    max-height: 30vh;
   }
-}
-@media (max-width: 575px) {
-  .footer__logo {
-    max-width: 40vw;
-    max-width: 40vh;
+  .footer__logo__img {
+    max-width: 15vw;
+  }
+  .footer__menu {
+    align-items: center;
+    margin-bottom: clamp(20px, 2rem, 30px);
+  }
+  .footer__contacts {
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */
