@@ -42,6 +42,7 @@
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 100%;
+  font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
 /*Для всех заголовков. При использовании нужно дополнительно указать цвет через переменные выше.*/
