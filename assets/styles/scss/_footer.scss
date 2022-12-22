@@ -70,7 +70,6 @@ footer {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 .footer__contacts__phone__icon {
     width: clamp(15px,1.38vw,20px);
@@ -116,7 +115,13 @@ footer {
     color:#FAE5D2;
     padding-left: clamp(5px,0.34vw,8px);
 }
+.footer__contacts__message:hover{
+    color: var(--main-color);
+}
 .footer__contacts__item:hover {
+    color: var(--main-color);
+}
+.footer__contacts__social:hover {
     color: var(--main-color);
 }
 @media (max-width: 767px){

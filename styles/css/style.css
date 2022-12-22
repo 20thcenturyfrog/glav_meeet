@@ -1205,7 +1205,15 @@ footer {
   padding-left: clamp(5px, 0.34vw, 8px);
 }
 
+.footer__contacts__message:hover {
+  color: var(--main-color);
+}
+
 .footer__contacts__item:hover {
+  color: var(--main-color);
+}
+
+.footer__contacts__social:hover {
   color: var(--main-color);
 }
 
