@@ -3,7 +3,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin-bottom: clamp(70px, 3.01vh, 176px);
 
   @media (max-width: 730px) {
     background-image: url("/assets/images/offer_mobile.jpg");
@@ -23,7 +22,7 @@
   justify-content: space-between;
   max-width: clamp(335px, 81.25vw, 1170px);
   margin: 0 auto;
-  padding: clamp(96px, 2.07vh, 121px) 0;
+  padding: clamp(96px, 10.42vw, 150px) 0;
 }
 
 .offer__content-wrapper {
