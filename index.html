@@ -10,6 +10,42 @@
     <link rel="stylesheet" href="/styles/css/style.css" />
   </head>
   <body>
+    <header class="header">
+      <div class="header__contacts">
+        <div class="header__contacts-item">
+          <img class="header-icon" src="assets/images/map_label_icon.svg">
+          <p class="header-link">г. Барнаул, ул. 65 лет Победы, 6</p>
+        </div>
+        <div class="header__contacts-item">
+          <img class="header-icon" src="assets/images/phone_icon.svg">
+          <img class="header-icon" src="assets/images/whatsap_icon.svg">
+          <a href="tel:+7 (929) 397-06-66" class="header-link">+7 (929) 397-06-66</a>
+        </div>
+        <div class="header__contacts-item">
+          <img class="header-icon" src="assets/images/vk_icon.svg">
+          <a href="https://vk.com/glav_meet" class="header-link" target="_blank">vk.com/glav_meet</a>
+        </div>
+      </div>
+      <div class="header__logo">
+        <img class="header-logo" src="assets/images/logo_header.svg">
+      </div>
+      <div class="header__nav">
+        <a href="#products" class="header-link header-link-menu">Продукция</a>
+        <a href="#review" class="header-link header-link-menu">Отзывы</a>
+        <a href="#contacts" class="header-link header-link-menu">Контакты</a>
+      </div>
+      <div class="burger" role="navigation">
+        <input type="checkbox" class="burger__checkbox" />
+        <div class="burger__icon" id="menuToggle"></div>
+        <ul class="burger__menu" id="menu">
+            <li><a href="#features">Причины быть постоянным покупателем</a></li>
+            <li><a href="#products">Продукция</a></li>
+            <li><a href="#review">Отзывы</a></li>
+            <li><a href="#faq">Часто задаваемые вопросы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </div>
+    </header>
     <main>
       <section class="offer">
         <div class="offer__background">
@@ -679,11 +715,11 @@
               «Главный мясной»</p>
           </div>
           <div class="footer__menu">
-            <a class="footer__menu__item" href="#">Причины быть постоянным покупателем</a>
-            <a class="footer__menu__item" href="#">Часто задаваемые вопросы</a>
-            <a class="footer__menu__item" href="#">Отзывы</a>
-            <a class="footer__menu__item" href="#">Продукция</a>
-            <a class="footer__menu__item" href="#">Контакты</a>
+            <a class="footer__menu__item" href="#features">Причины быть постоянным покупателем</a>
+            <a class="footer__menu__item" href="#products">Продукция</a>
+            <a class="footer__menu__item" href="#review">Отзывы</a>
+            <a class="footer__menu__item" href="#faq">Часто задаваемые вопросы</a>
+            <a class="footer__menu__item" href="#contacts">Контакты</a>
           </div>
           <div class="footer__contacts">
             <div class="footer__contacts__address">

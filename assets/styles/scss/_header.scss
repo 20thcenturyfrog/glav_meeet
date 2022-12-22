@@ -1,0 +1,207 @@
+// надо прописать, чтобы прокрутка по нажатию ссылки к нужной части страницы происходила плавно
+html {
+    scroll-behavior: smooth;
+  }
+  
+//   хедер
+
+.header {
+    max-width: clamp(335px, 81.25vw, 1170px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr clamp(50px, 8.68vw, 125px) 1fr;
+    align-items: center;
+    padding: clamp(16px, 1.39vw, 20px) 0;
+
+    @media (max-width: 939px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 335px) {
+        padding: 16px 20px;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media (max-width: 939px) {
+            display: none;
+        }
+      }
+
+    &__contacts-item {
+        display: flex;
+        align-items: flex-end;
+      }
+
+    &__nav {
+        display: flex;
+        justify-self: flex-end;
+        gap: 30px;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+      }
+}
+  
+  .header-logo {
+    width: clamp(50px, 8.68vw, 125px);
+  }
+    
+  .header-link {
+    @include main-bolder;
+    text-decoration: none;
+    color: var(--main-font-color);
+    font-feature-settings: 'pnum' on, 'lnum' on;
+  }
+  
+  .header-icon {
+    margin-right: 0.6rem;
+  }
+  
+  a:hover {
+    color: var(--secondary-color);
+  }
+  
+//   бургер
+  .burger {
+    display: none;
+    position: relative;
+
+    &__checkbox {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: -16px;
+        right: 0px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 3;
+        -webkit-touch-callout: none;
+
+        &:checked ~ .burger__menu {
+            transform: none;
+        }
+      }
+
+    &__icon {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 1px;
+        background-color: var(--main-font-color);
+        z-index: 2;
+        -webkit-user-select: none;
+        user-select: none;
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 1px;
+            background-color: var(--main-font-color);
+        }
+
+        &::after {          
+            top: -5px;
+        }
+
+        &::before {
+            top: 5px;
+        } 
+      }
+
+      &__icon,
+      &__icon::after,
+      &__icon::before {
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+            0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+      }
+
+      &__checkbox:checked {
+        ~ .burger__icon,
+        ~ .burger__icon::after,
+        ~ .burger__icon::before {
+          background-color: var(--main-font-color);
+      }
+    }
+
+      &__checkbox:checked ~ .burger__icon {
+        background-color: #fff;
+      }
+
+      &__checkbox:checked ~ .burger__icon::before {
+        opacity: 1;  
+        transform: translateY(-5px) rotate(-45deg);
+      }
+
+      &__checkbox:checked ~ .burger__icon::after {
+        opacity: 1;
+        transform: translateY(5px) rotate(45deg);
+      }
+
+      &__checkbox ~ .burger__menu {
+        opacity: 0;
+      }
+
+      &__checkbox:checked ~ .burger__menu {
+        opacity: 1;
+      }
+
+      &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        text-align: center;
+        justify-content: flex-end;
+        z-index: 1;
+        position: absolute;
+        top: -60px;
+        right: 0;
+        width: clamp(335px, 81.25vw, 1170px);
+        margin: 0;
+        padding: 132px 30px 60px;
+        background-color: #fff;
+        box-shadow: 0px 0px 16px #ffffff;
+        border-radius: 0px 0px 20px 20px;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased; 
+        transform-origin: 0% 0%;
+        transform: translate(0, -100%);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+            0.5s cubic-bezier(0.77, 0.2, 0.05, 1); 
+        text-decoration: none;
+        cursor: pointer;  
+
+        @media screen and (max-width: 499px) {
+            height: 80vh;
+        }
+      }
+  }
+
+  
+  .burger__menu > li > a {
+        text-decoration: none;
+        color: var(--main-font-color);
+        @include main-bolder;
+        transition: color 0.3s ease;
+    }
+  
+  .burger__menu > li > a:focus,
+  .burger__menu > li > a:active {
+          color: var(--secondary-color);
+        }
+        
+  @media screen and (max-width: 767px) {
+    .burger {
+        display: block;
+        justify-self: end;
+    }
+  }
