@@ -349,6 +349,65 @@ a:hover {
   width: 0.8rem;
 }
 
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: clamp(335px, 81.25vw, 1170px);
+  margin: 0 auto;
+}
+
+.cards {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-top: 120px;
+}
+.cards__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: clamp(16px, 2.083vw, 30px);
+  row-gap: clamp(20px, 2.083vw, 40px);
+  justify-content: center;
+}
+.cards__item {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cards__text {
+  text-align: center;
+}
+
+.features__title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(3.6rem, 4.027vw, 5.8rem);
+  line-height: 120%;
+  text-align: center;
+}
+
+.features__card-title {
+  font-family: "Raleway";
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #981322;
+  margin-bottom: 18px;
+}
+
+.features__card-text {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #1F1C1C;
+  text-align: center;
+}
+
+.features-icon {
+  margin-bottom: 20px;
+}
+
 .products {
   max-width: clamp(320px, 81.25vw, 1170px);
   margin: 0 auto;
