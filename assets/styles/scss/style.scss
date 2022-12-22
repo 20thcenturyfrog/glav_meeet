@@ -10,3 +10,15 @@
 @import "./faq";
 @import "./contacts";
 @import "./footer";
+
+.offer,
+.features,
+.products,
+.review,
+.banner-small,
+.questions {
+    margin-bottom: clamp(70px, 9.17vw, 132px);
+}
+ 
+    
+  

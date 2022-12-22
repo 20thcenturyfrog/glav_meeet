@@ -1441,4 +1441,12 @@ input:checked ~ .tab-label .tab-ico {
   .footer__contacts {
     align-items: center;
   }
+}
+.offer,
+.features,
+.products,
+.review,
+.banner-small,
+.questions {
+  margin-bottom: clamp(70px, 9.17vw, 132px);
 }/*# sourceMappingURL=style.css.map */
