@@ -35,6 +35,7 @@
 .features__title {
     @include h1;
     text-align: center;
+    padding-bottom: clamp(50px, 4.86vw, 70px);
 }
 
 .features__card-title {
