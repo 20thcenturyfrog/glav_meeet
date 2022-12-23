@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   gap: 32px;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .contacts__title {
@@ -32,7 +32,6 @@
   // gap: 1em;
 }
 .map {
-
   padding: clamp(50px, 4.86vw, 70px) 0;
   // width: 100%;
   // grid-column: 2/3;
@@ -59,7 +58,7 @@
 .contact-item_icon {
   width: 20px;
   height: 20px;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 .contact-item__text {
   @include main-bolder;
@@ -80,7 +79,6 @@
 }
 
 @media (max-width: 1245px) {
-
   .map {
     display: none;
   }
@@ -94,7 +92,6 @@
 }
 
 @media (max-width: 900px) {
-
   .map {
     display: none;
   }
@@ -148,7 +145,7 @@
   .hours {
     grid-column: 2/3;
     grid-row: 2/3;
-    margin-top: 0;   
+    margin-top: 0;
   }
   .vk {
     grid-column: 1/2;

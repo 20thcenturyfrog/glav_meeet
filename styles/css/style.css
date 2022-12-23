@@ -40,16 +40,17 @@ html {
   display: grid;
   grid-template-columns: 1fr clamp(50px, 8.68vw, 125px) 1fr;
   align-items: center;
-  padding: clamp(16px, 1.39vw, 20px) 0;
+  padding: clamp(18px, 1.39vw, 20px) 0;
 }
 @media (max-width: 939px) {
   .header {
     grid-template-columns: 1fr 1fr;
+    padding: clamp(16px, 1.25vw, 18px) 0;
   }
 }
-@media (max-width: 335px) {
+@media (max-width: 360px) {
   .header {
-    padding: 16px 20px;
+    padding: 16px 15px;
   }
 }
 .header__contacts {
@@ -94,7 +95,11 @@ html {
 }
 
 .header-icon {
-  margin-right: 0.6rem;
+  margin-right: 8px;
+}
+
+.header-address-icon {
+  margin-right: 14px;
 }
 
 a:hover {
@@ -129,7 +134,9 @@ a:hover {
   background-color: var(--main-font-color);
   z-index: 2;
   -webkit-user-select: none;
-  user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
 }
 .burger__icon::after, .burger__icon::before {
   content: "";
@@ -256,7 +263,7 @@ a:hover {
 @media (max-width: 730px) {
   .offer__content-wrapper {
     justify-content: center;
-    align-content: center;
+    align-items: center;
     text-align: center;
     margin: 0 auto;
   }
@@ -341,7 +348,8 @@ a:hover {
   font-size: 1.4rem;
   line-height: 100%;
   color: #fdfdfd;
-  writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
 
@@ -365,7 +373,8 @@ a:hover {
 .cards__wrapper {
   display: flex;
   flex-wrap: wrap;
-  column-gap: clamp(16px, 2.083vw, 30px);
+  -moz-column-gap: clamp(16px, 2.083vw, 30px);
+       column-gap: clamp(16px, 2.083vw, 30px);
   row-gap: clamp(20px, 2.083vw, 40px);
   justify-content: center;
 }
@@ -429,12 +438,14 @@ a:hover {
 .products__card-container {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: -webkit-min-content -webkit-min-content;
   grid-template-rows: min-content min-content;
   gap: clamp(30px, 3.125vw, 45px);
 }
 @media (max-width: 899px) {
   .products__card-container {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
     grid-template-rows: min-content min-content min-content;
   }
 }
@@ -520,6 +531,8 @@ a:hover {
   color: var(--main-font-color);
 }
 .review__item {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 .review__container {
@@ -555,7 +568,8 @@ a:hover {
   margin: 20px;
   padding: clamp(20px, 2.22vw, 32px);
   background: rgba(255, 255, 255, 0.4392156863);
-  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   border-radius: 20px;
 }
 @media (max-width: 1170px) {
@@ -655,7 +669,8 @@ a:hover {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  column-gap: clamp(10px, 1.38vw, 20px);
+  -moz-column-gap: clamp(10px, 1.38vw, 20px);
+       column-gap: clamp(10px, 1.38vw, 20px);
 }
 .review__name-and-date {
   display: flex;
@@ -921,7 +936,8 @@ a:hover {
 }
 .slider__nav {
   display: flex;
-  column-gap: 5px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
   justify-content: center;
   margin-top: 32px;
 }
@@ -945,7 +961,7 @@ a:hover {
   background-position: center;
   background-size: cover;
 }
-@media (max-width: 550px) {
+@media (max-width: 764px) {
   .banner-small {
     background-image: url("/assets/images/banner_mobile.png");
   }
@@ -963,7 +979,7 @@ a:hover {
   margin: 0 auto;
   padding: 29px 0;
 }
-@media (max-width: 550px) {
+@media (max-width: 764px) {
   .banner-small__wrapper {
     flex-direction: column;
     justify-content: center;
@@ -976,7 +992,7 @@ a:hover {
 .banner-small__logo {
   max-width: 276px;
 }
-@media (max-width: 550px) {
+@media (max-width: 764px) {
   .banner-small__logo {
     max-width: 125px;
   }
@@ -994,7 +1010,7 @@ a:hover {
   max-width: 491px;
   margin-left: 50px;
 }
-@media (max-width: 550px) {
+@media (max-width: 764px) {
   .banner-small__slogan {
     text-align: center;
     align-self: center;
@@ -1172,7 +1188,7 @@ input:checked ~ .tab-label .tab-ico {
 .contact-item_icon {
   width: 20px;
   height: 20px;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .contact-item__text {
@@ -1249,7 +1265,8 @@ input:checked ~ .tab-label .tab-ico {
     grid-template-rows: 1fr 1fr 0.3fr;
     justify-content: center;
     align-items: center;
-    column-gap: 32px;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
   }
   .hours {
     grid-column: 2/3;
@@ -1300,6 +1317,7 @@ input:checked ~ .tab-label .tab-ico {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 
 .footer__logo {
@@ -1332,6 +1350,12 @@ input:checked ~ .tab-label .tab-ico {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  width: clamp(170px, 21.88vw, 315px);
+}
+@media (max-width: 767px) {
+  .footer__menu {
+    width: 315px;
+  }
 }
 
 .footer__menu__item,
@@ -1364,8 +1388,8 @@ input:checked ~ .tab-label .tab-ico {
 }
 
 .footer__contacts__map__icon {
-  width: clamp(15px, 1.38vw, 20px);
-  height: clamp(15px, 1.38vw, 20px);
+  width: 14px;
+  height: 20px;
   box-sizing: border-box;
   background-image: url("/assets/images/map_icon_footer.svg");
   background-size: contain;
@@ -1374,34 +1398,36 @@ input:checked ~ .tab-label .tab-ico {
 }
 
 .footer__contacts__phone__icon {
-  width: clamp(15px, 1.38vw, 20px);
-  height: clamp(15px, 1.38vh, 20px);
-  background-image: url(/assets/images/phone_icon_footer.svg);
+  width: 20px;
+  height: 20px;
+  background-image: url("/assets/images/phone-icon.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  filter: invert(85%) sepia(44%) saturate(104%) hue-rotate(345deg) brightness(97%) contrast(102%);
 }
 
 .footer__contacts__wa__icon {
-  width: clamp(20px, 1.38vw, 24px);
-  height: clamp(20px, 1.38vh, 24px);
-  background-image: url(/assets/images/whatsapp_icon_footer.svg);
+  width: 20px;
+  height: 20px;
+  background-image: url("/assets/images/whatsapp-icon.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  filter: invert(85%) sepia(44%) saturate(104%) hue-rotate(345deg) brightness(97%) contrast(102%);
 }
 
 .footer__contacts__vk__icon {
-  width: clamp(20px, 1.38vw, 24px);
-  height: clamp(20px, 1.38vh, 24px);
-  background-image: url(/assets/images/vk_icon_footer.svg);
+  width: 20px;
+  height: 20px;
+  background-image: url("/assets/images/vk-icon.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  filter: invert(85%) sepia(44%) saturate(104%) hue-rotate(345deg) brightness(97%) contrast(102%);
 }
 
-.footer__contacts__address,
-.footer__contacts__message,
-.footer__contacts__social {
+.footer__contacts__address-text,
+.footer__contacts__item {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 500;
@@ -1411,22 +1437,29 @@ input:checked ~ .tab-label .tab-ico {
   color: var(--light-color);
 }
 
-.footer__contacts__address p {
+.footer__contacts__address-text {
+  display: flex;
+  gap: 8px;
+  align-items: center;
   padding-left: clamp(5px, 0.34vw, 8px);
-}
-
-.footer__contacts__address:hover {
-  color: var(--main-color);
 }
 
 .footer__contacts__item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
   text-decoration: none;
-  color: var(--light-color);
   padding-left: clamp(5px, 0.34vw, 8px);
 }
 
-.footer__contacts:hover {
-  color: var(--main-color);
+.footer__contacts__item:hover {
+  color: #000000;
+}
+
+.footer__contacts__item:hover .footer__contacts__phone__icon,
+.footer__contacts__item:hover .footer__contacts__wa__icon,
+.footer__contacts__item:hover .footer__contacts__vk__icon {
+  filter: none;
 }
 
 @media (max-width: 767px) {

@@ -4,7 +4,7 @@
   background-position: center;
   background-size: cover;
 
-  @media (max-width: 550px) {
+  @media (max-width: 764px) {
     background-image: url("/assets/images/banner_mobile.png");
   }
 }
@@ -21,7 +21,7 @@
   margin: 0 auto;
   padding: 29px 0;
 
-  @media (max-width: 550px) {
+  @media (max-width: 764px) {
     flex-direction: column;
     justify-content: center;
     align-content: center;
@@ -33,7 +33,7 @@
 .banner-small__logo {
   max-width: 276px;
 
-  @media (max-width: 550px) {
+  @media (max-width: 764px) {
     max-width: 125px;
   }
 }
@@ -45,7 +45,7 @@
   max-width: 491px;
   margin-left: 50px;
 
-  @media (max-width: 550px) {
+  @media (max-width: 764px) {
     text-align: center;
     align-self: center;
     margin-left: 0;

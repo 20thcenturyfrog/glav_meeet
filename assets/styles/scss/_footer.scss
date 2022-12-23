@@ -1,126 +1,146 @@
 .footer {
-    background-color:  var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 .footer__wrap {
-    max-width: clamp(335px, 81.25vw, 1170px);
-    margin: 0 auto;
-    padding: clamp(32px, 3.47vw, 50px) 0;
+  max-width: clamp(335px, 81.25vw, 1170px);
+  margin: 0 auto;
+  padding: clamp(32px, 3.47vw, 50px) 0;
 }
 .footer__row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
 }
 .footer__logo {
-    display: flex;
-    align-items: center;
-    gap: clamp(4px, 1.39vw, 20px);
+  display: flex;
+  align-items: center;
+  gap: clamp(4px, 1.39vw, 20px);
 }
 .footer__logo-img {
-    flex: 1 0 auto;
-    width: clamp(50px, 8.68vw, 125px);
-    height: clamp(42.4px, 7.36vw, 106px);
-    background-image: url("/assets/images/logo_footer.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
+  flex: 1 0 auto;
+  width: clamp(50px, 8.68vw, 125px);
+  height: clamp(42.4px, 7.36vw, 106px);
+  background-image: url("/assets/images/logo_footer.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .footer__logo-text {
-    flex: 0 1 auto;
-    @include footer-name;
-    max-width: clamp(150px, 15.76vw, 227px);
+  flex: 0 1 auto;
+  @include footer-name;
+  max-width: clamp(150px, 15.76vw, 227px);
 }
 .footer__menu {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: clamp(170px, 21.88vw, 315px);
+
+  @media (max-width: 767px) {
+    width: 315px;
+  }
 }
 
 .footer__menu__item,
 .footer__menu__contacts {
-    @include main-bolder;
-    text-decoration: none;
-    color: var(--light-color);
+  @include main-bolder;
+  text-decoration: none;
+  color: var(--light-color);
 }
 .footer__menu__item:hover {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 .footer__contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .footer__contacts__address,
 .footer__contacts__message,
 .footer__contacts__social {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 .footer__contacts__map__icon {
-    width: clamp(15px,1.38vw,20px);
-    height: clamp(15px,1.38vw,20px);
-    box-sizing: border-box;
-    background-image: url("/assets/images/map_icon_footer.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+  width: 14px;
+  height: 20px;
+  box-sizing: border-box;
+  background-image: url("/assets/images/map_icon_footer.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .footer__contacts__phone__icon {
-    width: clamp(15px,1.38vw,20px);
-    height: clamp(15px,1.38vh,20px);
-    background-image: url(/assets/images/phone_icon_footer.svg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  background-image: url("/assets/images/phone-icon.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: invert(85%) sepia(44%) saturate(104%) hue-rotate(345deg)
+    brightness(97%) contrast(102%);
 }
 .footer__contacts__wa__icon {
-    width: clamp(20px,1.38vw,24px);
-    height: clamp(20px,1.38vh,24px);
-    background-image: url(/assets/images/whatsapp_icon_footer.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  background-image: url("/assets/images/whatsapp-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(85%) sepia(44%) saturate(104%) hue-rotate(345deg)
+    brightness(97%) contrast(102%);
 }
 .footer__contacts__vk__icon {
-    width: clamp(20px,1.38vw,24px);
-    height: clamp(20px,1.38vh,24px);
-    background-image: url(/assets/images/vk_icon_footer.svg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  background-image: url("/assets/images/vk-icon.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: invert(85%) sepia(44%) saturate(104%) hue-rotate(345deg)
+    brightness(97%) contrast(102%);
 }
-.footer__contacts__address,
-.footer__contacts__message,
-.footer__contacts__social {
-    @include main-bolder;
-    color: var(--light-color);
+.footer__contacts__address-text,
+.footer__contacts__item {
+  @include main-bolder;
+  color: var(--light-color);
 }
-.footer__contacts__address p{
-    padding-left: clamp(5px,0.34vw,8px);
-}
-.footer__contacts__address:hover {
-    color: var(--main-color);
-}
-
-.footer__contacts__item{
-    text-decoration: none;
-    color:var(--light-color);
-    padding-left: clamp(5px,0.34vw,8px);
-}
-.footer__contacts:hover{
-    color: var(--main-color);
+.footer__contacts__address-text {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding-left: clamp(5px, 0.34vw, 8px);
 }
 
-@media (max-width: 767px){
-    .footer__row {
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;     
-    }
+.footer__contacts__item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  text-decoration: none;
+  padding-left: clamp(5px, 0.34vw, 8px);
+}
 
-    .footer__menu {
-        align-items: center;
-    }
-    .footer__contacts {
-        align-items: center;
-    }
+.footer__contacts__item:hover {
+  color: #000000;
+}
+
+.footer__contacts__item:hover .footer__contacts__phone__icon,
+.footer__contacts__item:hover .footer__contacts__wa__icon,
+.footer__contacts__item:hover .footer__contacts__vk__icon {
+  filter: none;
+}
+
+@media (max-width: 767px) {
+  .footer__row {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .footer__menu {
+    align-items: center;
+  }
+  .footer__contacts {
+    align-items: center;
+  }
 }
